@@ -3,20 +3,20 @@
 require_relative "lib/acts_as_tenant/delayed_job/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "acts_as_tenant-delayed_job"
-  spec.version = ActsAsTenant::DelayedJob::VERSION
-  spec.authors = ["Nuno Costa"]
-  spec.email = ["nuno.mmc@gmail.com"]
+  spec.name          = "acts_as_tenant-delayed_job"
+  spec.version       = ActsAsTenant::DelayedJob::VERSION
+  spec.authors       = ["Nuno Costa"]
+  spec.email         = ["nuno.mmc@gmail.com"]
 
-  spec.summary = "Runs jobs in the scope of a tenant"
-  spec.description = "It adds support for Delayed Job."
-  spec.license = "MIT"
+  spec.summary       = "Runs jobs in the scope of a tenant"
+  spec.description   = "It adds support for Delayed Job."
+  spec.license       = "MIT"
 
-  spec.homepage = "https://github.com/nunommc/acts_as_tenant-delayed_job"
+  spec.homepage      = "https://github.com/nunommc/acts_as_tenant-delayed_job"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = spec.homepage
-  spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/main/CHANGELOG.md"
+  spec.metadata["homepage_uri"]     = spec.homepage
+  spec.metadata["source_code_uri"]  = spec.homepage
+  spec.metadata["changelog_uri"]    = "#{spec.homepage}/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -25,11 +25,11 @@ Gem::Specification.new do |spec|
   end
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "rails", ">= 4.0"
-  spec.add_dependency "acts_as_tenant", ">= 0.6"
-  spec.add_runtime_dependency "delayed_job", "~> 4.1"
+  spec.add_dependency 'rails','>= 4.0'
+  spec.add_dependency "acts_as_tenant", ">= 0.4.4"
+  spec.add_dependency "delayed_job", "~> 4.1"
 
   # spec.add_development_dependency 'rspec'
   # spec.add_development_dependency 'rspec-rails'
-  spec.add_development_dependency("sqlite3")
+  spec.add_development_dependency('sqlite3')
 end
