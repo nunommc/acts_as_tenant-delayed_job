@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "acts_as_tenant", ">= 0.4.4"
   spec.add_dependency "delayed_job", "~> 4.1"
-  spec.add_dependency 'rails', '>= 5', '< 7'
+  spec.add_dependency 'rails', '>= 4', '< 7'
 
   # spec.add_development_dependency 'rspec'
   # spec.add_development_dependency 'rspec-rails'
