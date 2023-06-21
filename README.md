@@ -10,6 +10,27 @@ Delayed Job support for ActsAsTenant gem
 bundle add acts_as_tenant-delayed_job
 ```
 
+## Usage
+
+Without this gem, DelayedJob would raise
+
+```
+Job ActiveJob::QueueAdapters::DelayedJobAdapter::JobWrapper (id=2) (queue=default) RUNNING
+[Worker(host:Waqass-MBP.cust.communityfibre.co.uk pid:6058)] Job ActiveJob::QueueAdapters::DelayedJobAdapter::JobWrapper (id=2) (queue=default) FAILED (2 prior attempts) with ActsAsTenant::Errors::NoTenantSet: ActsAsTenant::Errors::NoTenantSet
+```
+
+This gem allows for a worker to run a job in the scope of the tenant that enqueued it. To do so, use the ActiveJob notation like
+
+```ruby
+MyMailer.notification(user).deliver_later
+```
+
+The other notation is not supported:
+```ruby
+MyMailer.delay.notification(user)
+```
+
+
 Contributing to this gem
 ------------------------
 
