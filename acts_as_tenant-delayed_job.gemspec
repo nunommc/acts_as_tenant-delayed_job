@@ -25,9 +25,9 @@ Gem::Specification.new do |spec|
   end
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'rails','>= 4.0'
   spec.add_dependency "acts_as_tenant", ">= 0.4.4"
   spec.add_dependency "delayed_job", "~> 4.1"
+  spec.add_dependency 'rails', '>= 5', '< 7'
 
   # spec.add_development_dependency 'rspec'
   # spec.add_development_dependency 'rspec-rails'

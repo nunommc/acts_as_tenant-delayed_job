@@ -3,7 +3,7 @@ require_relative "boot"
 require "rails/all"
 
 Bundler.require(*Rails.groups)
-require "acts_as_tenant"
+require "acts_as_tenant/delayed_job"
 
 module Dummy
   class Application < Rails::Application

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "delayed_job/version"
+require 'acts_as_tenant'
 
 module ActsAsTenant
   module DelayedJob
